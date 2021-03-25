@@ -4,24 +4,30 @@ background-size: cover;
 }
 
 .prof-box{
-	width: 500px;
-	height: 500px;
+	width: calc(500px/0.9);
+	height: calc(500px/1);
 	background-color: rgba(0,0,0,0.7);
+	transition: transform .2s; /* Animation */
 	border-radius: 25px;
 	color:white;
 	padding:40px;
-	margin:0 auto;
+	margin:0 auto;		
 	margin-top:70px;
 	text-align:center;
 }
 
+.prof-box:hover{
+	transform: scale(1.1);
+}
+
 .prof-pic{
 	border-radius: 50%;
-	height: 250px;
-	width: 250px;
+	height: calc(250px/1.2);
+	width: calc(250px/1.2);
 	border: 3px solid white;
 	filter:grayscale(100%);
 }
+
 
 h1{
 	font-family: 'Roboto', sans-serif;
@@ -39,7 +45,7 @@ p{
 }
 
 .line-break{
-	width:140px;
+	width:calc(140px/2);
 	margin:0 auto;
 	border-top:1px solid white;
 }
@@ -55,4 +61,19 @@ p{
 
 .social-icons a:hover{
 	color:orange;
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+
+.btn:hover {
+  background-color: RoyalBlue;
 }
