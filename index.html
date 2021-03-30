@@ -1,41 +1,472 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>My Portfolio</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-		<!-- 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		-->
-	</head>
-	<body>
-		<div class="prof-box">
-			<img src="images/mudit.jpg" class="prof-pic">
-			<h1> Mudit Mathur </h1>
-			<div class="line-break"></div>
-			<p> Software Developer, Data Science and Cloud Enthusiast </p>
-			<p> Java | Machine Learning | React </p>
-			<div class="social-icons">
-				<a href="https://github.com/muditmathur2020" target="_blank"><i class="fab fa-github-square"></i></a>
-				<a href="https://www.linkedin.com/in/mudit-mathur99/" target="_blank"><i class="fab fa-linkedin"></i></a>
-			</div>
-			<button class="btn"><i class="fa fa-download"></i> Resume</button>
-		</div>
-		<div class="skills-box">
-			<h1> Skills </h1>
-			<div class="skills-images">
-				<h3> Programming Languages </h3>
-				<img id="close" src="https://img.icons8.com/nolan/80/java-coffee-cup-logo.png" title="Java"/>
-				<img src="https://img.icons8.com/color/80/000000/python.png"/>
-				<img src="https://img.icons8.com/color/80/000000/c-plus-plus-logo.png"/>
-				<br>
-				<br>
-				<br>
-				<div class="line-break-black"></div>
-				<h3> Data Science </h3>
-				<img src="https://img.icons8.com/color/80/000000/tensorflow.png" title="TensorFlow"/>
-				<img src="https://img.icons8.com/color/80/000000/tableau-software.png" title="Tableau"/> 
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Mudit | Software Developer</title>
+		<link rel="icon" href="img/favicon.png" sizes="40x40" type="image/png">
+		<!-- EXTERNAL CSS LINK  -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- GOOGLE FONT LINKS -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato:700&display=swap"
+			rel="stylesheet"
+			/>
+			<link
+				href="https://fonts.googleapis.com/css?family=Muli:500&display=swap"
+				rel="stylesheet"
+				/>
+				<!-- FONTAWESOME LINK  -->
+				<script src="https://kit.fontawesome.com/4a3b1f73a2.js" crossorigin="anonymous"></script>
+				<!-- SLICK SLIDER LINK -->
+				<!-- <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+				<script src="js/jQuery3.4.1.js"></script>
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+				<style>
+				.aboutMe {
+				background-image: url("img/parallaxBg.jpg");
+				height: 100vh;
+				}
+				</style>
+			</head>
+			<body>
+				<div class="wrapper">
+					<!-- NAVIGATION STARTS (DESKTOP VIEW AFTER 768px) ------------------->
+					<nav class="navBar">
+						<div id="navMenu">
+							<a href="#intro" class="logo">
+								<span id="name"> Mudit <br /> Mathur </span>
+								<span id="profession">Software Engineer, Cloud and Data Science Enthusiast</span>
+							</a>
+							<a href="#about" class="navItems"> about </a>
+							<a href="#experience" class="navItems"> experience </a>
+							<a href="#projects" class="navItems"> projects </a>
+							<a href="#skills" class="navItems"> skills </a>
+							<a href="#education" class="navItems"> education </a>
+							<a href="#contact" class="navItems"> contact </a>
+							<a
+								href="https://drive.google.com/file/d/1r2JaxkiflwpYpG5JQR8Vo132QTx59SV2/view?usp=sharing"
+								target="_blank"
+								class="navItems resumeHover"
+								>
+								resume
+							</a>
+						</div>
+					</nav>
+					<!-- NAVIGATION ENDS --------------------->
+					<!-- NAVIGATION STARTS (DESKTOP VIEW BEFORE 768px) ------------------->
+					<nav class="topHeading" id="logoHeading">
+						<div class="mobileViewNavbar">
+							<div id="toggleOpen"> &#9776; </div>
+							
+							<div class="mobileViewNavmenu">
+								<a href="#intro" class="mobileViewLogo">
+									<span id="myName"> Mudit Mathur </span>
+									<span id="myProfession"> Software Engineer, Cloud and Data Science Enthusiast </span>
+								</a>
+								
+							</div>
+						</div>
+					</nav>
+					<!-- NAVIGATION ENDS  ------------------->
+					<!-- HIDDEN NAVIGATION ITEMS STARTS (MOBILE VIEW) -->
+					<nav class="hiddenMenu" id="showHide">
+						<!-- <div id="toggleClose"> &#10005; </div> -->
+						<div id="toggleClose"></div>
+						<div id="navMenu hiddenItems">
+							<a href="#about" class="navItems about" id="navItems"> about </a>
+							<a href="#experience" class="navItems experience" id="navItems"> experience </a>
+							<a href="#projects" class="navItems projects" id="navItems"> projects </a>
+							<a href="#skills" class="navItems skills" id="navItems"> skills </a>
+							<a href="#education" class="navItems education" id="navItems"> education </a>
+							<a href="#contact" class="navItems contact" id="navItems"> contact </a>
+							<a
+								href="https://drive.google.com/file/d/12gLPJuBkOfsKONT7UhM579LFegraZ67/view"
+								target="_blank"
+								class="navItems resumeHover" id="navItems"
+								>
+								resume
+							</a>
+						</div>
+					</nav>
+					<!-- HIDDEN NAVIGATION ITEMS ENDS -->
+					<!-- SECTION STARTS ------------------------------------------>
+					<!-- INTRO SECTION STARTS -->
+					<section class="section scrollspy" id="intro">
+						<div class="introWrapper">
+							<section class="aboutMe parallaxContainer">
+								<style>
+								h2 {
+								text-shadow: 0 0 3px black, 0 0 5px black;
+								}
+								</style>
+								<h2>
+								Software Engineer <br />
+								Microsoft Azure Administrator<br />
+								I Love Java !
+								</h2>
+							</section>
+						</div>
+					</section>
+					<!-- INTRO SECTION ENDS -->
+					<!-- ABOUT SECTION STARTS -->
+					<section class="section scrollspy" id="about">
+						<h1>ABOUT</h1>
+						<div class="aboutSection commonProperty">
+							<!-- <h3>Hello!</h3> -->
+							<p id="hello">
+								Software Engineer and Data Science Enthusiast with a background in Computer Science Engineering (Specialization in Cyber Security).
+								Experience in Machine Learning, Deep Learning, Web Dev, Software Engineering.
+								<br>
+								• Check out my<a href="https://github.com/muditmathur2020"> Github </a>
+								<br>
+								<em>
+								𝗣𝗮𝘀𝘀𝗶𝗼𝗻𝗮𝘁𝗲 𝗮𝗯𝗼𝘂𝘁 𝗯𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝗱𝗮𝘁𝗮-𝗱𝗿𝗶𝘃𝗲𝗻 𝗽𝗿𝗼𝗱𝘂𝗰𝘁𝘀 𝗮𝗻𝗱 𝗯𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝘀𝘁𝗿𝗮𝘁𝗲𝗴𝗶𝗲𝘀.
+								𝗠𝘆 𝗜𝗻𝘁𝗲𝗿𝗲𝘀𝘁𝘀 𝗶𝗻𝗰𝗹𝘂𝗱𝗲𝘀 𝗠𝗮𝗰𝗵𝗶𝗻𝗲 𝗟𝗲𝗮𝗿𝗻𝗶𝗻𝗴, 𝗗𝗮𝘁𝗮 𝗩𝗶𝘀𝘂𝗮𝗹𝗶𝘀𝗮𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀, 𝗝𝗮𝘃𝗮.</em>
+								
+								<!-- I'm available for remote work - Do give me a chance to work with
+								you.
+								<a href="mailto:sharmapriyanka84510@gmail.com" id="contactMe">Contact me</a> -->
+							</p>
+							<div class="currentFocus">
+								<h4>Current Focus: </h4> <p>Cloud and Data Science</p>
+							</div>
+							
+						</div>
+					</section>
+					<!-- ABOUT SECTION ENDS -->
+					<!-- EXPERIENCE SECTION STARTS -->
+					<section class="section scrollspy" id="experience">
+						<h1>EXPERIENCE</h1>
+						<div class="commonProperty experienceSectoin">
+							<!-- BOX-1 -->
+							<div class="box box1">
+								<div class="boxhead">
+									<div class="boxLogo">
+										<img
+										src="img/thesparksfoundation.png"
+										alt=""
+										/>
+									</div>
+									<h3>Data Science and Business Analytics Intern</h3>
+									<div class="position"><h4>The Sparks Foundation</h4></div>
+								</div>
+								<!-- <hr style="width: 90%; border: 0.7px solid black;" /> -->
+								<hr>
+								<div class="boxBody">
+									<p>
+										<!--                 <ul> -->
+										<!-- <li>Working on their product.</li> -->
+										Implemented Deep Learning algorithms like CNN, LSTM, and NLP <br />
+										Used BI tools such as Tableau, PowerBI to analyze data, find important patterns,
+										and design visualization dashboards on the given dataset.
+										
+										<!--                 </ul> -->
+									</p>
+								</div>
+								<div class="boxFoot">
+									<p>Apr 2020 - May 2020</p>
+								</div>
+							</div>
+							<!-- BOX-1 -->
+							<div class="box box1">
+								<div class="boxhead">
+									<div class="boxLogo">
+										<img
+										src="img/verzeo.png"
+										alt=""
+										/>
+									</div>
+									<h3>Machine Learning Intern</h3>
+									<div class="position"><h4> Verzeo</h4></div>
+								</div>
+								<!-- <hr style="width: 90%; border: 0.7px solid black;" /> -->
+								<hr>
+								<div class="boxBody">
+									<p>
+										<ul>
+											<li>Awarded “ Outstanding Performer 2020 ” among 60+ Interns</li>
+											<li>Worked with NLP, Ensemble Techniques, 	and various Machine Learning Models
+											using Python3.</li>
+											<li>Worked upon various projects including but not limited to Twitter Gender
+												Classifier, Stack Overflow Ratings Analyzer.
+											</li>
+										</ul>
+									</p>
+								</div>
+								<div class="boxFoot">
+									<p>Nov 2020 - Jan 2021</p>
+								</div>
+							</div>
+							<!-- BOX-2  -->
+							<div class="box box2">
+								<div class="boxhead">
+									<div class="boxLogo">
+										<img
+										src="img/solis.png"
+										alt=""
+										/>
+									</div>
+									<h3>Marketing Intern</h3>
+									<div class="position"><h4>Solis Solar Group</h4></div>
+								</div>
+								<!-- <hr style="width: 90%; border: 0.7px solid black;" /> -->
+								<hr>
+								<div class="boxBody">
+									<p>
+										Worked on a Solar Rooftop project for a Car Manufacturing Company in Haryana.<br />
+										Increased sales by 15% using Digital Marketing-LinkedIn. Created detailed
+										progress reports and did cold calling
+									</p>
+								</div>
+								<div class="boxFoot">
+									<p>Nov 2019 - Dec 2019</p>
+								</div>
+							</div>
+							
+							
+						</section>
+						<!-- EXPERIENCE SECTION ENDS -->
+						<!-- PROJECTS SECTION STARTS -->
+						<section class="section scrollspy" id="projects">
+							<h1>PROJECTS</h1>
+							<div class="commonProperty projectsSection">
+								<!-- PROJECT SLIDER - 1 -->
+								<div class="box box1">
+									<div class="imgGallary">
+										<div class="image">
+											<img src="img/twitter/logo.jpg" alt="">
+										</div>
+										<div class="image">
+											<img src="img/twitter/1.png" alt="">
+										</div>
+										<div class="image">
+											<img src="img/twitter/2.png" alt="">
+										</div>
+										<div class="image">
+											<img src="img/twitter/3.png" alt="">
+										</div>
+									</div>
+									<!-- <a href="https://github.com/lassiecoder/E-CommerceWebsite"> -->
+									<h4>Twitter Gender Classifier   <br><br>
+									<a href="https://github.com/muditmathur2020/TwitterGenderClassifier" id="contactMe">View</a>
+									</h4>
+									<!-- </a> -->
+								</div>
+								<!-- PROJECT SLIDER - 1 -->
+								<div class="box box1">
+									<div class="imgGallary">
+										<div class="image">
+											<img src="img/ransom/logo.jpg" alt="">
+										</div>
+										<div class="image">
+											<img src="img/ransom/1.png" alt="">
+										</div>
+										<div class="image">
+											<img src="img/ransom/2.png" alt="">
+										</div>
+										<div class="image">
+											<img src="img/ransom/3.png" alt="">
+										</div>
+									</div>
+									<!-- <a href="https://github.com/lassiecoder/E-CommerceWebsite"> -->
+									<h4>Ransomware Prediction  <br><br>
+									<a href="https://github.com/muditmathur2020/RansomwareDetection" id="contactMe">View</a>
+									</h4>
+									<!-- </a> -->
+								</div>
+								<!-- PROJECT SLIDER - 2 -->
+								<div class="box box2">
+									<div class="imgGallary">
+										<div class="image">
+											<img src="img/arogya/logo.jpg" alt="">
+										</div>
+										<div class="image">
+											<img src="img/arogya/1.png" alt="">
+										</div>
+										<div class="image">
+											<img src="img/arogya/1.png" alt="">
+										</div>
+										<div class="image">
+											<img src="img/arogya/logo2.webp" alt="">
+										</div>
+									</div>
+									
+									<h4>Arogya Setu App <br><br>
+									<a href="https://muditmathur2020.github.io/302-FOUND/" id="contactMe"> View </a>
+									</h4>
+								</div>
+								<!-- PROJECT SLIDER - 3 -->
+								<!-- <div class="box box3">
+																		<div class="imgGallary">
+																												<div class="image">
+																																						<img src="img/vegan1.png" alt="">
+																												</div>
+																												<div class="image">
+																																						<img src="img/vegan2.png" alt="">
+										</div> -->
+										<!-- <div class="image">
+																				<img src="img/vegan3.png" alt="">
+										</div>
+										<div class="image">
+																				<img src="img/vegan4.png" alt="">
+										</div>
+										<div class="image">
+																				<img src="img/vegan5.png" alt="">
+										</div>
+										<div class="image">
+																				<img src="img/vegan6.png" alt="">
+										</div>
+										<div class="image">
+																				<img src="img/vegan7.png" alt="">
+										</div> -->
+									<!-- </div>
+									
+									<h4>Vegan Store (Template) <br><br>
+									<a href="https://codepen.io/lassiecoder/full/XWrXYbx" id="contactMe"> View </a>
+									</h4>
+									<!-- </a> -->
+								</div> -->
+							</div>
+						</section>
+						<!-- PROJECTS SECTION ENDS -->
+						<!-- SKILLS SECTION STARTS -->
+						<section class="section scrollspy" id="skills">
+							<h1>SKILLS</h1>
+							<div class="commonProperty skillsSection">
+								<div class="box box1">
+									<img src="img/java.jpg" alt="">
+									<h4>Java</h4>
+								</div>
+								<div class="box box1">
+									<img src="img/python.jpg" alt="">
+									<h4>Python</h4>
+								</div>
+								<div class="box box1">
+									<img src="img/c++.png" alt="">
+									<h4>C++</h4>
+								</div>
+								<div class="box box1">
+									<img src="img/azure.png" alt="">
+									<h4>Azure</h4>
+								</div>
+								<div class="box box1">
+									<img src="img/jupyter.png" alt="">
+									<h4>Jupyter</h4>
+								</div>
+								<div class="box box1">
+									<img src="img/html5.png" alt="">
+									<h4>HTML5</h4>
+								</div>
+								<div class="box box2">
+									<img src="img/css3.png" alt="">
+									<h4>CSS3</h4>
+								</div>
+								<!-- <div class="box box3">
+																		<img src="img/sass.png" alt="">
+																		<h4>SASS</h4>
+								</div> -->
+								<div class="box box4">
+									<img src="img/javascript.png" alt="">
+									<h4>JavaScript</h4>
+								</div>
+								<div class="box box5">
+									<img src="img/jquery.png" alt="">
+									<h4>jQuery</h4>
+								</div>
+								<div class="box box6">
+									<img src="img/react.png" alt="">
+									<h4>React JS + Native</h4>
+								</div>
+								<div class="box box7">
+									<img src="img/github.png" alt="">
+									<h4>GitHub</h4>
+								</div>
+								
+							</div>
+						</section>
+						<!-- SKILLS SECTION ENDS -->
+						<!-- EDUCATION SECTION STARTS -->
+						<section class="section scrollspy" id="education">
+							<h1>EDUCATION</h1>
+							<div class="commonProperty educationSection">
+								<!-- BOX-1 -->
+								<div class="box box1">
+									<div class="boxHead">
+										<h3>SRM Institute of Science and Technology</h3>
+										<h5>June 2018 - May 2022</h5>
+									</div>
+									<p class="durationAndDegree">
+										B. Tech - Bachelor of Technology <br>
+										Computer Science Engineering with Specialisation in Cyber Security
+										<em>
+										<ul>
+											<li>CGPA : 9.30/10.0</li>
+										</ul>
+										</em>
+									</p>
+								</div>
+								<!-- BOX-2 -->
+								<div class="box box2">
+									<div class="boxHead">
+										<h3>Manav Rachna International School</h3>
+										<h5>2016 - 2018</h5>
+									</div>
+									<p class="durationAndDegree">
+										Senior Secondary and Secondary Education CBSE <br />
+										<em>
+										<ul>
+											<li>(XII) Percentage - 83.6%</li>
+											<li> (X) Percentage - 80.6%</li>
+										</ul>
+										</em>
+									</p>
+								</div>
+							</div>
+						</section>
+						<!-- EDUCATION SECTION ENDS -->
+						<!-- CONTACT SECTION STARTS -->
+						<section class="section scrollspy" id="contact">
+							<h1>CONTACT</h1>
+							<div class="commonProperty contactSection">
 
-			</div>
-		</div>
-	</body>
-</html>
+								<div class="box box3">
+									<a href="https://www.linkedin.com/in/mudit-mathur99/" target="_blank">
+										<i class="fab fa-linkedin-in"></i>
+									</a>
+								</div>
+								<div class="box box4">
+									<a href="mailto:muditmathur2020@gmail.com" target="_blank">
+										<i class="fas fa-envelope"></i>
+									</a>
+								</div>
+								<div class="box box5">
+									<a href="https://github.com/muditmathur2020" target="_blank">
+										<i class="fab fa-github-alt"></i>
+									</a>
+								</div>
+								<div class="box box6">
+									<a href="https://www.hackerrank.com/RA1811030010100/" target="_blank">
+										<i class="fab fa-hackerrank"></i>
+									</a>
+								</div>	
+							
+							</div>
+						</section>
+						<!-- CONTACT SECTION ENDS -->
+						<!-- SECTION ENDS ---------------------------------------------->
+					</div>
+					<!-- JS LINKS -->
+					<script src="js/script.js"></script>
+					<script src="js/jQuery.js"></script>
+					<script src="js/simple-scrollspy.min.js"></script>
+					<!-- <script>
+					window.addEventListener("hashchange", function () {
+					window.scrollByPages(1);
+					});
+					</script> -->
+				</body>
+			</html>
